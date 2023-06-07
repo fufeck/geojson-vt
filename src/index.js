@@ -18,7 +18,7 @@ const defaultOptions = {
     debug: 0                // logging level (0, 1 or 2)
 };
 
-class GeoJSONVT {
+export class GeoJSONVT {
     constructor(data, options) {
         options = this.options = extend(Object.create(defaultOptions), options);
 
@@ -211,6 +211,6 @@ function extend(dest, src) {
     return dest;
 }
 
-export default function geojsonvt(data, options) {
+export function geojsonvt(data, options) {
     return new GeoJSONVT(data, options);
 }
